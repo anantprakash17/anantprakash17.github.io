@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
     const fetchProjects = async () => {
       try {
         // First try to fetch the projects JSON file
-        const response = await fetch('/src/data/projects.json');
+        const response = await fetch('https://raw.githubusercontent.com/anantprakash17/anantprakash17.github.io/refs/heads/main/src/data/projects.json');
 
         if (!response.ok) {
           throw new Error('Failed to fetch projects data');

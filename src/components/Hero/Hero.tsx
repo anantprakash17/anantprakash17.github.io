@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
   };
   useEffect(() => {
     const fetchSkills = async () => {
-      const response = await fetch('/src/data/skills.json');
+      const response = await fetch('https://raw.githubusercontent.com/anantprakash17/anantprakash17.github.io/refs/heads/main/src/data/skills.json');
       const data = await response.json();
       setSkills(data.skills);
     };

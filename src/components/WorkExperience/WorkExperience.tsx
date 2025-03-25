@@ -28,7 +28,7 @@ const WorkExperience: React.FC = () => {
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const response = await fetch('/src/data/work-experience.json');
+        const response = await fetch('https://raw.githubusercontent.com/anantprakash17/anantprakash17.github.io/refs/heads/main/src/data/work-experience.json');
         if (!response.ok) {
           throw new Error('Failed to fetch experience data');
         }
