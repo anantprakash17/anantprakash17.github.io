@@ -1,0 +1,219 @@
+:root {
+  /* Light theme (Ayu Light inspired) */
+  --bg-primary: #fafafa;
+  --bg-primary-rgb: 250, 250, 250;
+  --bg-secondary: #f0f0f0;
+  --bg-secondary-rgb: 240, 240, 240;
+  --color-primary: #5c6166;
+  --color-secondary: #111111;
+  --accent-primary: #ff9940;
+  --accent-secondary: #39BAE6;
+  --accent-tertiary: #86b300;
+  --border-color: #d9d9d9;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* Common properties */
+  --header-height: 70px;
+  --max-width: 1200px;
+  --section-padding: 80px 20px;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+
+  /* Animation properties */
+  --animation-slow: 1s;
+  --animation-medium: 0.5s;
+  --animation-fast: 0.3s;
+  --bezier-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --bezier-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-theme='dark'] {
+  /* Dark theme (Ayu Dark inspired) */
+  --bg-primary: #0d1017;
+  --bg-primary-rgb: 13, 16, 23;
+  --bg-secondary: #1a1f29;
+  --bg-secondary-rgb: 26, 31, 41;
+  --color-primary: #bfbdb6;
+  --color-secondary: #e6e1cf;
+  --accent-primary: #ffb454;
+  --accent-secondary: #59c2ff;
+  --accent-tertiary: #c2d94c;
+  --border-color: #2d333f;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+
+html, body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+  scroll-padding-top: var(--header-height); /* Add scroll padding for anchor links */
+}
+
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--color-primary);
+  line-height: 1.6;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: var(--transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-secondary);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--accent-secondary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+section {
+  padding: var(--section-padding);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--header-height);
+}
+
+main section:first-child {
+  padding-top: 40px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s var(--bezier-smooth) forwards;
+  animation-delay: 0.2s;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  from { transform: translateX(-50%) scaleX(0); }
+  to { transform: translateX(-50%) scaleX(1); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Utility classes for animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn var(--animation-medium) ease-out forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp var(--animation-medium) var(--bezier-smooth) forwards;
+}
+
+.stagger-delay-1 { animation-delay: 0.1s; }
+.stagger-delay-2 { animation-delay: 0.2s; }
+.stagger-delay-3 { animation-delay: 0.3s; }
+.stagger-delay-4 { animation-delay: 0.4s; }
+.stagger-delay-5 { animation-delay: 0.5s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Animation for scroll reveal elements */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

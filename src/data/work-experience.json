@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "company": "IBM Canada",
+    "title": "Backend Developer Intern",
+    "location": "Markham, ON",
+    "startDate": "May 2022",
+    "endDate": "May 2024",
+    "description": "Worked on containerizing DB2 and Db2 Warehouse on cloud platforms.",
+    "achievements": [
+      "Wrote tests for different components of the project, increasing the test coverage by 20%.",
+      "Assissted in transitioning from bash to python for deployment code, improving readability and maintainability.",
+      "Created a dashboard to track test coverage and deployment status of the project, improving visibility for the team.",
+      "Worked on fixing CVEs to mitigate security risks."
+    ],
+    "technologies": [
+      "Kubernetes",
+      "Podman",
+      "Golang",
+      "Fyre",
+      "Bash",
+      "Python"
+    ]
+  },
+  {
+    "id": 2,
+    "company": "IBM Canada",
+    "title": "Backend Developer",
+    "location": "Markham, ON",
+    "startDate": "August 2024",
+    "endDate": "Present",
+    "description": "Worked on containerizing DB2 and Db2 Warehouse on cloud platforms.",
+    "achievements": [
+      "Uplifted operator code to latest kubernetes libraries, improving performance and stability.",
+      "Wrote code to generate stable hash for resources, reducing downtime during upgrades.",
+      "Added a feature to allow users from an external AD to login to DB2, improving usability.",
+      "Worked on allowing db2u to run on P10 cloud-rack, allowing distribution of nodes between different racks."
+    ],
+    "technologies": [
+      "Openshift",
+      "K8s",
+      "operator-sdk",
+      "controller-runtime"
+    ]
+  }
+]

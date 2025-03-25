@@ -1,0 +1,37 @@
+[
+  {
+    "id": 3,
+    "title": "Personal Portfolio Website",
+    "description": "This Website! Check out the code!",
+    "image": "portfolio.png",
+    "technologies": ["React", "TypeScript", "Vite", "CSS"],
+    "links": {
+      "live": "https://anantprakash17.github.io",
+      "github": "https://github.com/anantprakash17/anantprakash17.github.io"
+    },
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Spendy - Your Money, At A Glance.",
+    "description": "A dashboard application that helps you keep track of your expenses and income. It also provides insights and analytics, such as spending trends, categories, recurring expenses, and more.",
+    "image": "dashboard.png",
+    "technologies": ["Flask", "PostgreSQL", "SQLAlchemy", "Next.js", "Tailwind CSS", "TanstackQuery", "Docker"],
+    "links": {
+      "github": "https://github.com/anantprakash17/spendingTracker"
+    },
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Rhombichess",
+    "description": "Experience the thrill of RhombiChess, where traditional strategy meets innovative gameplay! A fresh twist on classic chess, featuring a challenging rhombus-shaped board and exciting new pieces!",
+    "image": "https://github.com/anantprakash17/rhombichess/blob/vercel/images/landingpage.png?raw=true",
+    "technologies": ["Python", "React", "Prisma", "Locust", "Next.js", "Vercel", "Bash"],
+    "links": {
+      "live": "https://rhombichess-nu.vercel.app/",
+      "github": "https://github.com/anantprakash17/rhombichess/tree/vercel"
+    },
+    "featured": true
+  }
+]
